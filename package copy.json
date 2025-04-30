@@ -1,0 +1,44 @@
+{
+  "name": "amplify-vite-react-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint:write": "npx biome lint --write",
+    "format:write": "npx biome format --write",
+    "lint:check": "npx biome lint --check",
+    "format:check": "npx biome format --check",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@aws-amplify/ui-react": "^6.5.5",
+    "aws-amplify": "^6.6.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^4.1.4"
+  },
+  "devDependencies": {
+    "@aws-amplify/backend": "^1.5.0",
+    "@aws-amplify/backend-cli": "^1.2.9",
+    "@biomejs/biome": "1.9.4",
+    "@tailwindcss/postcss": "^4.1.4",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.21",
+    "aws-cdk": "^2.138.0",
+    "aws-cdk-lib": "^2.138.0",
+    "constructs": "^10.3.0",
+    "esbuild": "^0.20.2",
+    "postcss": "^8.5.3",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.4.10"
+  },
+  "volta": {
+    "node": "22.15.0",
+    "npm": "10.9.2"
+  }
+}

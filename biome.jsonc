@@ -1,0 +1,94 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  // .gitignore 記載のファイルを無視
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "defaultBranch": "main" // 特定のリビジョン間で変更されたファイルのみを処理
+  },
+  "files": {
+    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", "src/**/*.json", "src/**/*.jsonc"],
+    "ignore": [],
+    "ignoreUnknown": true
+  },
+  // インポートを整理
+  "organizeImports": {
+    "enabled": true
+  },
+  // ----------------------------------------------------------
+  // 書式設定
+  // https://biomejs.dev/reference/configuration/#formatter
+  // ----------------------------------------------------------
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 120
+  },
+  // ----------------------------------------------------------
+  // リンター設定
+  // https://biomejs.dev/ja/linter/rules/
+  // ----------------------------------------------------------
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "all": true,
+      "a11y": {},
+      "complexity": {
+        "noExtraBooleanCast": "warn",
+        "noForEach": "off",
+        "noStaticOnlyClass": "warn"
+      },
+      "nursery": {},
+      "performance": {
+        "useTopLevelRegex": "off"
+      },
+      "security": {},
+      "style": {
+        "noDefaultExport": "warn",
+        "noParameterAssign": "warn",
+        "useBlockStatements": "off",
+        "useForOf": "warn"
+      },
+      "suspicious": {
+        "noConsole": {
+          "level": "warn",
+          "options": {
+            "allow": ["error", "warn", "info"]
+          }
+        },
+        "noExplicitAny": "warn"
+      }
+    }
+  },
+  // ----------------------------------------------------------
+  // JavaScript/TypeScript 設定
+  // https://biomejs.dev/reference/configuration/#javascript
+  // ----------------------------------------------------------
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "asNeeded",
+      "jsxQuoteStyle": "single",
+      "quoteStyle": "single",
+      "trailingCommas": "all",
+      "semicolons": "asNeeded"
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
+  // ----------------------------------------------------------
+  // 例外
+  // https://biomejs.dev/internals/language-support/#html-super-languages-support
+  // -----------------------------------------------------------
+  "overrides": [
+    {
+      "include": [],
+      "linter": {
+        "rules": {}
+      }
+    }
+  ]
+}
